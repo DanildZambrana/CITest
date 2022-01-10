@@ -19,6 +19,20 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.github.danildzambrana.citest.CITest</mainClass>
+                        </manifest>
+                    </archive>
+                    <finalName>CITest</finalName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
