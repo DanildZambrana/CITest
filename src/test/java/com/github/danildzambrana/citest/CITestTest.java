@@ -9,6 +9,7 @@ class CITestTest {
     @Test
     public void test() {
         assertTrue(true);
+
     }
 
 }
