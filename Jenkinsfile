@@ -4,25 +4,9 @@ pipeline {
     
     stages {
         stage('openjdk:7-jdk') {
-            agent {
-                docker {
-                    image 'jdk7_image'
-                }
+            tools {
+                jdk 'jdk-11;
             }
-            
-            steps {
-                
-                sh 'java -version'
-            }
-        }
-        
-        stage('java8') {
-            agent {
-                docker {
-                    image 'openjdk:8-jdk'
-                }
-            }
-            
             steps {
                 sh 'java -version'
             }
