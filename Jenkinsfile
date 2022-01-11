@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('openjdk:7-jdk') {
             tools {
-                jdk 'jdk-11;
+                jdk 'jdk-11'
             }
             steps {
                 sh 'java -version'
