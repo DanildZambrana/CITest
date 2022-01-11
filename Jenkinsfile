@@ -1,7 +1,6 @@
 pipeline {
     agent any
     
-
     stages {
         stage('openjdk:7-jdk') {
             agent {
