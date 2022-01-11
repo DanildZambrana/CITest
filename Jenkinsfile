@@ -1,14 +1,26 @@
 pipeline {
     
     agent any
+    tools {
+        jdk 'jdk-11'
+    }
     
     stages {
-        stage('openjdk:7-jdk') {
-            tools {
-                jdk 'jdk-11'
-            }
+        stage('build') {        
             steps {
-                sh 'java -version'
+                sh 'mvn compile -Dmaven.test.skip'
+            }
+        }
+        
+        stage('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        
+        stage('deploy') {
+            steps {
+                sh 'mvn clean package -Dmaven.test.skip'
             }
         }
     }
