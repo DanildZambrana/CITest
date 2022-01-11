@@ -2,19 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('openjdk:7-jdk') {
+            agent {
+                docker {
+                    image 'jdk7_image'
+                }
+            }
+            
             steps {
-                echo 'Building..'
+                
+                sh 'java -version'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+        
+        stage('java8') {
+            agent {
+                docker {
+                    image 'openjdk:8-jdk'
+                }
             }
-        }
-        stage('Deploy') {
+            
             steps {
-                echo 'Deploying....'
+                sh 'java -version'
             }
         }
     }
