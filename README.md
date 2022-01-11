@@ -1,1 +1,1 @@
-[![Build Status](https://jenkins.danildzambrana.tech/buildStatus/icon?job=Git+Test)](https://jenkins.danildzambrana.tech/job/Git%20Test/)
+[![Build Status](https://jenkins.danildzambrana.tech/job/CITest/job/master/badge/icon)](https://jenkins.danildzambrana.tech/job/CITest/job/master/)
